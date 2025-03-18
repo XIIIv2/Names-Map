@@ -21,7 +21,7 @@ public class DataHandler {
                 sb.append(String.format("%d) %d, %s%n",
                         count.incrementAndGet(),id, name)
         ));
-        return "\nALL NAMES:\n" + sb;
+        return "\nALL NAMES:\n" + sb.toString().trim();
     }
 
     // Метод формує виведення імені за певним id

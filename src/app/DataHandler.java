@@ -9,7 +9,13 @@ public class DataHandler {
 
     // Метод формує виведення нумерованого переліку імен
     public String getAll() {
+        //на всякий случай добавим валидацию
+        if (map.isEmpty()) {
+            return "Map is empty!";
+        }
+
         StringBuilder sb = new StringBuilder();
+        // оставляем AtomicInteger для масштабируемости приложения
         AtomicInteger count = new AtomicInteger(0);
         map.forEach((id, name) ->
                 sb.append(String.format("%d) %d, %s%n",
